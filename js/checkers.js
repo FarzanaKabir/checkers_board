@@ -29,12 +29,10 @@ let checkers = [
 ]
 
 function renderCheckers(){
-    console.log('rendering checkers')
     clearBoard()
     $(`.white.cell`).click(moveSelectedCheckerHere)
     for(let i=0; i<checkers.length; i++) {
         let checker = checkers[i];
-        console.log(checker)
         if (checker.row && checker.cell) {
             $(`#cell-${checker.row}-${checker.cell}`).html(renderChecker(i, checker.color))
             $(`#cell-${checker.row}-${checker.cell}`).unbind('click')

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log('document ready')
     $('#board-container').html(renderBoard())
     renderCheckers()
 })
@@ -33,15 +32,15 @@ function renderRow(rowNum) {
 }
 
 function renderCell(rowNum, cellNum) {
-    if (cellColor(cellNum, rowNum) === 'black') {
-        return `<div id="cell-${rowNum}-${cellNum}" class="cell black"></div>`
-    } else
+    if (cellColor(cellNum, rowNum) === 'white') {
         return `<div id="cell-${rowNum}-${cellNum}" class="cell white"></div>`
+    } else
+        return `<div id="cell-${rowNum}-${cellNum}" class="cell black"></div>`
 }
 
 /*** Helper Methods ***/
 function parity(num) {
-    return (num % 2 == 0) ? 'even' : 'odd'
+    return (num % 2 == 1) ? 'even' : 'odd'
 }
 
 function cellColor(cellNum, rowNum) {
@@ -63,10 +62,10 @@ function moveSelectedCheckerHere() {
         selectedChecker.cell = Number(idParts[2])
 
         console.log(`the checker I'm moving is `, selectedChecker.color)
-        if (selectedChecker.color == `black` && selectedChecker.row == 1) {
+        if (selectedChecker.color == `white` && selectedChecker.row == 1) {
             console.log(`I'm moving a black checker to the white home row`)
             selectedChecker.isKing = true
-        } else if (selectedChecker.color == `white` && selectedChecker.row == 8) {
+        } else if (selectedChecker.color == `black` && selectedChecker.row == 8) {
             console.log(`I'm moving a red checker to the black home row`)
             selectedChecker.isKing = true
         }
