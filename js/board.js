@@ -3,8 +3,8 @@ for (var i = 0; i < board.length; i++) {
     board[i] = new Array(8);
 }
 var figureColor = {
-    white: '<span class="white icon-smiley"></span>',
-    black: '<span class="black icon-smiley"></span>'
+    white: '<div class="white red-checkers"></div>',
+    black: '<div class="black black-checkers"></div>'
 }
 
 function initBoard() {
@@ -152,11 +152,15 @@ function move(x) {
     $(cells).removeClass('moved move');
     step(x);
 }
+var textColor = {
+    redText: '<div class="red-text">Red</div>',
+    blackText: '<div class="black-text">Black</div>'
+}
 function step(x) {
     x.innerHTML = $('.selected')[0].innerHTML;
     $('.selected')[0].innerText = '';
     $(cells).removeClass('selected step moved move');
-    switcher = !switcher;
+    switcher = !switcher; 
 }
 
 function score() {
