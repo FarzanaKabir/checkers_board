@@ -9,15 +9,15 @@ body{
     margin-top: 5vmin;
     display: inline-block;
     padding: 2vmin;
-    background-color: #ddd;
+    background-color: #848080;
 }
 .row{
     display: flex;
     justify-content: space-evenly;
 }
 .cell{
-    width: 10.5vmin;
-    height: 10.5vmin;
+    width: 8.5vmin;
+    height: 8.5vmin;
 }
 .white{
     background: #ecf0f1;
@@ -40,7 +40,7 @@ background: #374360;
 }
 .black-checker{
     background: #000;
-    color: #cccccc;
+    color: #ccc;
 }
 .selected {
     margin: 0;

@@ -31,7 +31,7 @@ let checkers = [
 function renderCheckers(){
     console.log('rendering checkers')
     clearBoard()
-    $(`.black.cell`).click(moveSelectedCheckerHere)
+    $(`.white.cell`).click(moveSelectedCheckerHere)
     for(let i=0; i<checkers.length; i++) {
         let checker = checkers[i];
         console.log(checker)

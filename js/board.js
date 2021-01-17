@@ -52,9 +52,9 @@ function moveSelectedCheckerHere() {
     console.log('things')
     if(selectedChecker) {
         console.log(`move checker here`)
-        let blackCell = $(this)
-        console.log(`black cell: `, blackCell)
-        let id = blackCell.attr('id')
+        let whiteCell = $(this)
+        console.log(`white cell: `, whiteCell)
+        let id = whiteCell.attr('id')
         console.log(`id: `, id)
         let idParts = id.split('-')
         console.log(`idParts = `, idParts)
@@ -67,7 +67,7 @@ function moveSelectedCheckerHere() {
             console.log(`I'm moving a black checker to the white home row`)
             selectedChecker.isKing = true
         } else if (selectedChecker.color == `white` && selectedChecker.row == 8) {
-            console.log(`I'm moving a white checker to the black home row`)
+            console.log(`I'm moving a red checker to the black home row`)
             selectedChecker.isKing = true
         }
 
@@ -79,7 +79,7 @@ function moveSelectedCheckerHere() {
 }
 
 function clearBoard() {
-    $(`.black.cell`).html(``)
-    $(`.black.cell`).unbind('click')
+    $(`.white.cell`).html(``)
+    $(`.white.cell`).unbind('click')
     $(`.out-of-play`).html(``)
 }
