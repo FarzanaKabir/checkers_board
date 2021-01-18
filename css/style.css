@@ -106,16 +106,16 @@ tr:nth-child(2n-1) td:nth-child(2n-1) {
     line-height: 30px;
 }
 
-.wPlayer,
+.rPlayer,
 .bPlayer {
     display: inline-block;
     width: 50%;
     font-size: 16px;
 }
 
-.wPlayer {
-    color: #000;
-    background: #fff;
+.rPlayer {
+    color: #fff;
+    background: red;
 }
 
 .bPlayer {

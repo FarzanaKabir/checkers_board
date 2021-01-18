@@ -38,9 +38,9 @@ var table = document.getElementsByTagName('table')[0];
 cells = table.getElementsByTagName('td');
 var switcher = true;
 
-var wPlayer = document.getElementById('wPlayerScore');
+var rPlayer = document.getElementById('rPlayerScore');
 var bPlayer = document.getElementById('bPlayerScore');
-var wPlayerScore = 0;
+var rPlayerScore = 0;
 var bPlayerScore = 0;
 
 
@@ -126,7 +126,7 @@ function myFunction(x) {
                     bPlayerScore += 3;
                 }
                 else {
-                    wPlayerScore += 3;
+                    rPlayerScore += 3;
                 }
                 score();
             }
@@ -146,7 +146,7 @@ function move(x) {
         bPlayerScore++;
     }
     else if ($('.moved').children().hasClass('black')) {
-        wPlayerScore++;
+        rPlayerScore++;
     }
     score();
     $('.moved')[0].innerHTML = '';
@@ -170,7 +170,7 @@ var changePlayer = function() {
     $('#current-player h3').html("Current Turn For: " + currentPlayer);
 };
 function score() {
-    wPlayer.innerHTML = wPlayerScore;
+    rPlayer.innerHTML = rPlayerScore;
     bPlayer.innerHTML = bPlayerScore;
 }
 
