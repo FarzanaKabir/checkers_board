@@ -68,11 +68,11 @@ td span {
     cursor: pointer;
 }
 td.selected .red-checkers, td.selected .black-checkers{
-    background: #61ad25 !important;
+    background: #009100 !important;
     border: 2px solid #fff;
 }
 td.step {
-    background: #b0d692 !important;
+    background: #87ff04 !important;
     cursor: pointer;
 }
 td.move {
@@ -88,7 +88,7 @@ tr:nth-child(2n-1) td:nth-child(2n-1) {
     text-shadow: 1px 1px #554422;
 }
 #current-player{
-    color: #61ad25;
+    color: #009100;
     font-weight: bold;
 }
 .red{
