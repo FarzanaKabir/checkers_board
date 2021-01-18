@@ -6,18 +6,18 @@ body{
 }
 
 .red-checkers{
-    width: 60%;
-    height: 60%;
+    width: 65%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: red;
     border-radius: 50%;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 .black-checkers{
-    width: 60%;
-    height: 60%;
+    width: 65%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +35,12 @@ body{
 }
 .icon-sad:before, .moved span:before {
     content: "☹";
+    color: #ffffff;
 }
 
 .icon-grin:before, .monster:before {
     content: "☻";
+    color: #ffffff;
 }
 
 table {
@@ -85,7 +87,13 @@ tr:nth-child(2n-1) td:nth-child(2n-1) {
     color: #fff;
     text-shadow: 1px 1px #554422;
 }
-
+#current-player{
+    color: #61ad25;
+    font-weight: bold;
+}
+.red{
+    color: red;
+}
 .black {
     color: #000;
     text-shadow: 1px 1px #554422;

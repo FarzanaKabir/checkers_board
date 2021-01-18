@@ -1,4 +1,5 @@
 var board = new Array(8);
+var currentPlayer = 'Red';
 for (var i = 0; i < board.length; i++) {
     board[i] = new Array(8);
 }
@@ -152,17 +153,22 @@ function move(x) {
     $(cells).removeClass('moved move');
     step(x);
 }
-var textColor = {
-    redText: '<div class="red-text">Red</div>',
-    blackText: '<div class="black-text">Black</div>'
-}
 function step(x) {
     x.innerHTML = $('.selected')[0].innerHTML;
     $('.selected')[0].innerText = '';
     $(cells).removeClass('selected step moved move');
-    switcher = !switcher; 
-}
+    switcher = !switcher;
+    changePlayer()
 
+}
+var changePlayer = function() {
+    if (currentPlayer === '<span class="black">Black</span>') {
+        currentPlayer = '<span class="red">Red</span>';
+    } else {
+        currentPlayer = '<span class="black">Black</span>';
+    }
+    $('#current-player h3').html("Current Turn For: " + currentPlayer);
+};
 function score() {
     wPlayer.innerHTML = wPlayerScore;
     bPlayer.innerHTML = bPlayerScore;
